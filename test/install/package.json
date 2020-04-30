@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@local/publish-test": "latest",
+    "no-scope": "latest",
+    "npm": "latest",
+    "yarn": "latest"
+  }
+}

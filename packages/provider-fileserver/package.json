@@ -1,0 +1,12 @@
+{
+  "name": "@baggy/provider-fileserver",
+  "version": "1.0.0",
+  "description": "Fileserver provider for @baggy/registry",
+  "author": "Daniel Schuster <tanuel.mategi@gmail.com>",
+  "repository": "https://github.com/Tanuel/baggy",
+  "license": "MIT",
+  "main": "provider-fileserver",
+  "peerDependencies": {
+    "@baggy/registry": "*"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@baggy/registry",
+  "version": "1.0.0",
+  "description": "Main Registry handler for the baggy project",
+  "author": "Daniel Schuster <tanuel.mategi@gmail.com>",
+  "repository": "https://github.com/Tanuel/baggy"
+}

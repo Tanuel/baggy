@@ -1,0 +1,7 @@
+{
+  "name": "no-scope",
+  "version": "1.0.0",
+  "publishConfig": {
+    "registry": "http://localhost:3000/"
+  }
+}
