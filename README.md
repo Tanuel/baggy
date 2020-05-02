@@ -12,6 +12,24 @@ For now unit tests are missing as well as support for a few npm commands.
 
 This Project is als not published on NPM yet.
 
+## Supported npm commands
+
+- [x] install/update/view
+- [x] publish
+- [x] unpublish
+- [x] audit (will proxy to the npm registry)
+- [x] ping
+- [x] dist-tag
+- [x] deprecate
+- [ ] login
+- [ ] whoami
+- [ ] team
+- [ ] token
+- [ ] search
+- [ ] stars
+- [ ] star
+- [ ] unstar
+
 ## Requirements
 
 - [yarn 1.x](https://yarnpkg.com/)
