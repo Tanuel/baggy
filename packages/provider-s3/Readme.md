@@ -1,6 +1,6 @@
 # @baggy/provider-s3
 
-A AWS S3 Bucket storage provider for @baggy/registry.
+An AWS S3 Bucket storage provider for @baggy/registry.
 
 Saves everything on the specified path in a s3 bucket.
 
@@ -34,5 +34,5 @@ const registry = new Registry({
 
 Currently it is not easily possible to directly access the s3 bucket
 for file downloads when proxying is enabled, since there is no built-in
-fallback mechanism if an artifact is missing. This could maybe solved with
-a lambda function
+fallback mechanism if an artifact is missing. This could maybe be solved with
+a redirect to the server on missing artifacts.
