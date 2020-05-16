@@ -5,7 +5,9 @@ const trimRegex = /^\/*/;
 function trimSlash(str: string): string {
   return str.replace(trimRegex, "");
 }
-
+function resolve(...str: string[]) {
+  return str.join("/");
+}
 class ProviderS3 implements Provider {
   constructor(private config: Config) {
     // For some reason this won't work and has to be provided when
@@ -21,11 +23,14 @@ class ProviderS3 implements Provider {
   private get bucket(): string {
     return this.config.bucket;
   }
+  private get prefix(): string {
+    return this.config.prefix ?? "";
+  }
 
   public async deleteFile(path: string): Promise<boolean> {
     const params: S3.DeleteObjectRequest = {
-      Key: path,
       Bucket: this.bucket,
+      Key: resolve(this.prefix, path),
     };
     await this.s3.deleteObject(params).promise();
     return true;
@@ -34,7 +39,7 @@ class ProviderS3 implements Provider {
   public async deleteDir(path: string): Promise<boolean> {
     const params: S3.DeleteObjectRequest = {
       Bucket: this.bucket,
-      Key: trimSlash(path),
+      Key: resolve(this.prefix, path),
     };
     await this.s3.deleteObject(params).promise();
     return true;
@@ -65,7 +70,7 @@ class ProviderS3 implements Provider {
   public async getArtifact(path: string): Promise<Buffer | null> {
     const params: S3.GetObjectRequest = {
       Bucket: this.bucket,
-      Key: trimSlash(path),
+      Key: resolve(this.prefix, path),
     };
     try {
       const result = await this.s3.getObject(params).promise();
@@ -80,9 +85,9 @@ class ProviderS3 implements Provider {
 
   public async writeFile(path: string, content: any): Promise<void> {
     const params: S3.PutObjectRequest = {
-      Body: content,
       Bucket: this.bucket,
-      Key: trimSlash(path),
+      Key: resolve(this.prefix, path),
+      Body: content,
     };
     await this.s3.upload(params).promise();
   }

@@ -4,7 +4,7 @@ An AWS S3 Bucket storage provider for @baggy/registry.
 
 Saves everything on the specified path in a s3 bucket.
 
-`yarn add sqlite3 @baggy/provider-fileserver @baggy/registry`
+`yarn add sqlite3 @baggy/provider-s3 @baggy/registry aws-sdk`
 
 ```typescript
 import ProviderS3 from "@baggy/provider-s3";

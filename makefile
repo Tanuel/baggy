@@ -15,6 +15,7 @@ clean:
 	rm -rf .local
 
 aws-mock:
+	mkdir -p .local
 	docker-compose -f ${EXPRESS_S3_DC_FILE} up
 
 aws-clean:
