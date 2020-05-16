@@ -1,0 +1,15 @@
+{
+  "name": "@baggy/provider-s3",
+  "version": "1.0.0",
+  "description": "AWS S3 provider for @baggy/registry",
+  "author": "Daniel Schuster <tanuel.mategi@gmail.com>",
+  "repository": "https://github.com/Tanuel/baggy",
+  "license": "MIT",
+  "main": "provider-s3",
+  "dependencies": {
+    "aws-sdk": "^2.678.0"
+  },
+  "peerDependencies": {
+    "@baggy/registry": "*"
+  }
+}

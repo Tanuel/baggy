@@ -1,0 +1,20 @@
+{
+  "ErrorDocument": {
+    "Key": "error.html"
+  },
+  "IndexDocument": {
+    "Suffix": "index.html"
+  },
+  "RoutingRules": [
+    {
+      "Condition": {
+        "HttpErrorCodeReturnedEquals": "403"
+      },
+      "Redirect": {
+        "HostName": "localhost:3000",
+        "HttpRedirectCode": "string",
+        "Protocol": "http"
+      }
+    }
+  ]
+}

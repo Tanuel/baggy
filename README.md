@@ -69,7 +69,6 @@ Code will be formatted on commit with `pretty-quick`. Also there is `yarn lint`
 
 Future Providers could be something like these:
 
-- AWS S3 Bucket for Artifacts
 - AWS DynamoDB for Metadata
 - Other cloud providers
 
