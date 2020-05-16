@@ -68,11 +68,11 @@ class Fileserver implements Provider {
     try {
       const stat = await fs.stat(path);
       if (!stat.isDirectory()) {
-        return await fs.mkdir(path, { recursive: true });
+        await fs.mkdir(path, { recursive: true });
       }
     } catch (e) {
       if (e.code === "ENOENT") {
-        return await fs.mkdir(path, { recursive: true });
+        await fs.mkdir(path, { recursive: true });
       } else {
         throw e;
       }

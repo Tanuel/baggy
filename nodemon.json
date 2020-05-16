@@ -1,5 +1,14 @@
 {
   "delay": 100,
   "ignore": ["./.aws/", "./.local/"],
-  "watch": ["lib", "test/express-server", "test/express-sqlite", "package.json", "tsconfig.json", "yarn.lock"]
+  "watch": [
+    "packages",
+    "examples",
+    "test/express-server",
+    "test/express-sqlite",
+    "package.json",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "ext": "*"
 }

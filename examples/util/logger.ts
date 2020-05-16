@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import chalk from "chalk";
 
+const logDir = ".local/debug-express-logs";
 export function writeLog(filename: string, content: any, overwrite: boolean = false): void {
   if (filename) {
     if (!fs.existsSync(path.dirname(filename))) {
@@ -26,7 +27,7 @@ export function writeLog(filename: string, content: any, overwrite: boolean = fa
 }
 
 export function debug(filename: string, content: any, overwrite: boolean = false): void {
-  writeLog(".local/debug-express-server/" + filename, content, overwrite);
+  writeLog(path.resolve(logDir, filename), content, overwrite);
 }
 
 // export function errorHandler(filename?: string): (err: any, req: Request, res: Response, next: NextFunction) => Promise<void> {
