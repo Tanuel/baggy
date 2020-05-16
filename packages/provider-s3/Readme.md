@@ -17,6 +17,7 @@ process.env.AWS_SECRET_ACCESS_KEY = "baggy-mock-key";
 
 const s3 = new S3({
   // pre-configure your S3
+  s3ForcePathStyle: true, // this line is required. setting this later in the s3-provider does not work for some reason
 });
 const providerConfig = { bucket: "baggy-registry-mock", s3 };
 
