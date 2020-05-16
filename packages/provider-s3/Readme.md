@@ -4,6 +4,12 @@ An AWS S3 Bucket storage provider for @baggy/registry.
 
 Saves everything on the specified path in a s3 bucket.
 
+## Example
+
+Refer to the [example implementation](https://github.com/Tanuel/baggy/tree/master/examples/express-s3)
+
+## Setup
+
 `yarn add sqlite3 @baggy/provider-s3 @baggy/registry aws-sdk`
 
 ```typescript
@@ -19,7 +25,7 @@ const s3 = new S3({
   // pre-configure your S3
   s3ForcePathStyle: true, // this line is required. setting this later in the s3-provider does not work for some reason
 });
-const providerConfig = { bucket: "baggy-registry-mock", s3 };
+const providerConfig = { bucket: "baggy-registry-mock", s3: s3, prefix: "registry-prefix" };
 
 const storage = new ProviderS3(providerConfig);
 
