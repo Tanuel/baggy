@@ -12,7 +12,7 @@
     "@baggy/provider-s3": "*",
     "chalk": "^4.0",
     "express": "^4.17.1",
-    "aws-sdk": "^2.678.0"
+    "aws-sdk": "^2.814.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.2"
