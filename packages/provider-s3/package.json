@@ -7,7 +7,7 @@
   "license": "MIT",
   "main": "provider-s3",
   "dependencies": {
-    "aws-sdk": "^2.678.0"
+    "aws-sdk": "^2.814.0"
   },
   "peerDependencies": {
     "@baggy/registry": "*"
